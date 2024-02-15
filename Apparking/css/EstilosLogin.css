@@ -106,14 +106,23 @@ footer{ /*Footer de la pagiina-(pide de pag)*/
     margin-top: 8%;
 }
 @media(min-width:720px){
-    .logo{
-        background-image: url(../Imagenes/Mi\ proyecto.png);
+    .contenedor{
         width: 100%;
+        padding-top: 0px;
+    }
+
+
+    .logo{
+        background-image: url(../img/imgLogin.jpg);
+        width: 50%;
         min-width: 400px;
-        background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 30% 30%;
+        background-size: 100% 80%;
+    }
+    
+    .registro{
+        width: 50%;
     }
 }
 
