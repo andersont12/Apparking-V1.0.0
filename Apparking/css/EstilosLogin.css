@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+}
+
+.cabeceraPrincipal{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.logoCabecera{
+    width: 100%;
+    max-width: 100px;
+    min-width: 100px;
+    border: solid black;
+}
+
+.tituloCabecera{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.contenedor {
+    /*Es donde se encuentra el contenedor del logo de la empresa y el login*/
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    border-top: 3px solid rgb(40, 36, 36);
+    padding-top: 30px;
+}
+
+.contenedor form{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.registro { /*Donde se ubica el registro donde solicita correo y contraseña*/
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    float: left; 
+    width: 700%;
+}
+
+.registro h2{
+    font-size: 40px;
+}
+
+form input{
+    height: 40px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.BotonIni { /* Este es el estilo de los cuadros donde se ingresa "correo - contraseña" */
+    margin-bottom: 1%;
+    padding: 0.5%;
+    padding-left: 0.5%;
+    border: none;
+    border-bottom: solid 1px #000000;
+    text-align: center;
+    font-size: 12px;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.login { /*Estilo del boton "Ingresar"*/
+    height: 30px;
+    background-color: rgb(73, 79, 77);
+    border: none;
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: white;
+}
+footer{ /*Footer de la pagiina-(pide de pag)*/
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    color: white;
+    height: 4%;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 8%;
+}
+@media(min-width:720px){
+    .logo{
+        background-image: url(../Imagenes/Mi\ proyecto.png);
+        width: 100%;
+        min-width: 400px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30% 30%;
+    }
+}
+
