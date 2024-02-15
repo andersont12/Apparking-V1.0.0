@@ -25,7 +25,10 @@ header{
     width: 100%;
     max-width: 100px;
     min-width: 100px;
-    border: solid black;
+}
+
+#imgLogoCabecera{
+    width: 100%;
 }
 
 .tituloCabecera{
@@ -33,6 +36,11 @@ header{
     width: 70%;
     align-items: center;
     margin-left: 50px;
+}
+
+#imgTituloCabecera{
+    width: 60%;
+    height: 100%;
 }
 
 .contenedor {
@@ -108,7 +116,7 @@ footer{ /*Footer de la pagiina-(pide de pag)*/
 @media(min-width:720px){
     .contenedor{
         width: 100%;
-        padding-top: 0px;
+        padding: 10px 30px;
     }
 
 
@@ -118,7 +126,8 @@ footer{ /*Footer de la pagiina-(pide de pag)*/
         min-width: 400px;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 100% 80%;
+        background-size: 100% 100%;
+        border-radius: 40px;
     }
     
     .registro{
