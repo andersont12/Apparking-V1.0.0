@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/EstilosLogin.css">
-    <title>login</title>
-</head>
 
 <body>
     <header>
@@ -26,11 +18,17 @@
         </div>
         <div class="registro">
             <h2>Ingresar</h2>
-            <form method="post" action="validar.php">
-                <input type="text" name="txtusuario" value="" placeholder="Usuario" class="form-control" >
-                <input type="password" name="txtcontra" value="" placeholder="Contraseña" class="form-control">
-                <button class="login" type="submit" name="Ingresar">Ingresar</button>
+            <form method="post">
+                <input type="text" name="ingUsuario" value="" placeholder="Usuario" class="form-control" >
+                <input type="password" name="ingPassword" value="" placeholder="Contraseña" class="form-control">
+                <button class="login" type="submit" name="Ingresar" value="Ingresar">Ingresar</button>
                 <p> ¿Olvido su contraseña? haga click <a class="clickAqui" href="Recuperar_contra.html">AQUÌ</a></p>
+                <?php
+
+                    $login = new ControladorUsuarios();
+                    $login -> ctrIngresoUsuario();
+        
+                ?>
             </form>
         </div>
     </div>
