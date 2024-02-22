@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'ProtestGuerrilla-Regular';
+    src: url(/css/FUENTES/Protest_Guerrilla/ProtestGuerrilla-Regular.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +16,7 @@ body {
 
     width: 100%;
 }
+
 
 header{
     width: 100%;
@@ -33,12 +41,14 @@ header{
 
 .tituloCabecera{
     display: flex;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 70%;
     align-items: center;
-    margin-left: 50px;
 }
 
 #imgTituloCabecera{
+    padding-left: 20px;
     width: 60%;
     height: 100%;
 }

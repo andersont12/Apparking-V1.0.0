@@ -5,7 +5,7 @@
         <div class="cabeceraPrincipal">
             <div class="logoCabecera">
                 <!--logo-->
-                <img src="../img/logoCabecera.jpeg" alt="" id="imgLogoCabecera">
+                <img src="img/logoCabecera.jpeg" alt="" id="imgLogoCabecera">
             </div>
             <div class="tituloCabecera">
                 <h1>Apparking</h1>
