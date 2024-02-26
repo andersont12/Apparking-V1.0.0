@@ -23,7 +23,13 @@ session_start();
   ======================================-->
 
   <!--CSS LOGIN-->
-  <link rel="stylesheet" href="css/EstilosLogin.css">
+  <link rel="stylesheet" href="css/estilosLogin.css">
+
+  <!--FUENTES-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
