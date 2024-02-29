@@ -12,21 +12,21 @@ class ControladorUsuarios{
 
 			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["ingUsuario"])){
 
-			   	$encriptar = md5($_POST["ingPassword"]);
+			   	$encriptar = $_POST["ingPassword"];
 
 				$tabla = "usuarios";
-				$item = "usuario";
+				$item = "email";
 				$item2 = "clave";
 				$valor = $_POST["ingUsuario"];
 
 				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $item2, $valor, $encriptar);
-				echo 1;
+				
 				if($respuesta){
 
 					if($respuesta["estado"] == 1){
 
 						$_SESSION["iniciarSesion"] = "ok";
-						$_SESSION["id"] = $respuesta["id"];
+						//$_SESSION["id"] = $respuesta["id"];
 						$_SESSION["nombre"] = $respuesta["nombre"];
 						$_SESSION["usuario"] = $respuesta["usuario"];
 						$_SESSION["foto"] = $respuesta["foto"];

@@ -126,7 +126,7 @@ CUERPO DOCUMENTO
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
    echo '<div class="wrapper">';
-
+   
     /*=============================================
     CABEZOTE
     =============================================*/
