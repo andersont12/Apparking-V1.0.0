@@ -8,7 +8,7 @@
         <div class="registro">
             <header>
                 <div class="logo">
-                    <img src="img/logoCabecera.jpeg" alt="">
+                    <img src="img/logoPagina.png" alt="">
                 </div>
                 <div class="tituloLogo">
                     <h2>Apparking</h2>
