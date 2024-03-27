@@ -13,10 +13,11 @@ session_start();
 
   <title>Bienvenidos - Apparking</title>
 
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name='viewport' />
 
-  <link rel="icon" href="vistas/img/plantilla/tenencia.png">
+  
+
+ 
 
    <!--=====================================
   PLUGINS DE CSS
@@ -30,85 +31,14 @@ session_start();
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Protest+Guerrilla&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vistas/modulos/template/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vistas/modulos/template/vendors/base/vendor.bundle.base.css">
 
-  <link rel="stylesheet" href="css/responsive.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="vistas/bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="vistas/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="vistas/modulos/template/css/style.css">
 
-  <!-- Theme style -->
-  <link rel="stylesheet" href="vistas/dist/css/AdminLTE.css">
+  <link rel="shortcut icon" href="vistas/modulos/template/images/favicon.png" />
   
-  <!-- AdminLTE Skins -->
-  <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.min.css">
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-   <!-- DataTables -->
-  <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
-
-  <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="vistas/plugins/iCheck/all.css">
-
-   <!-- Daterange picker -->
-  <link rel="stylesheet" href="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="vistas/bower_components/morris.js/morris.css">
-
-  <!--=====================================
-  PLUGINS DE JAVASCRIPT
-  ======================================-->
-
-  <!-- jQuery 3 -->
-  <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
   
-  <!-- Bootstrap 3.3.7 -->
-  <script src="vistas/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <!-- FastClick -->
-  <script src="vistas/bower_components/fastclick/lib/fastclick.js"></script>
-  
-  <!-- AdminLTE App -->
-  <script src="vistas/dist/js/adminlte.min.js"></script>
-
-  <!-- DataTables -->
-  <script src="vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  <script src="vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
-  <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
-
-  <!-- SweetAlert 2 -->
-  <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
-   <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
-
-  <!-- iCheck 1.0.1 -->
-  <script src="vistas/plugins/iCheck/icheck.min.js"></script>
-
-  <!-- InputMask -->
-  <script src="vistas/plugins/input-mask/jquery.inputmask.js"></script>
-  <script src="vistas/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-  <script src="vistas/plugins/input-mask/jquery.inputmask.extensions.js"></script>
-
-  <!-- jQuery Number -->
-  <script src="vistas/plugins/jqueryNumber/jquerynumber.min.js"></script>
-
-  <!-- daterangepicker http://www.daterangepicker.com/-->
-  <script src="vistas/bower_components/moment/min/moment.min.js"></script>
-  <script src="vistas/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-  <!-- Morris.js charts http://morrisjs.github.io/morris.js/-->
-  <script src="vistas/bower_components/raphael/raphael.min.js"></script>
-  <script src="vistas/bower_components/morris.js/morris.min.js"></script>
-
-  <!-- ChartJS http://www.chartjs.org/-->
-  <script src="vistas/bower_components/Chart.js/Chart.js"></script>
 
 
 
@@ -125,25 +55,27 @@ CUERPO DOCUMENTO
 
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
-   echo '<div class="wrapper">';
+   
+
+    include "modulos/template/index.html";
    
     /*=============================================
     CABEZOTE
     =============================================*/
 
-    include "modulos/cabezote.php";
+    //include "modulos/cabezote.php";
 
     /*=============================================
     MENU
     =============================================*/
 
-    include "modulos/menu.php";
+    //include "modulos/Superadmin/template.html";
 
     /*=============================================
     CONTENIDO
     =============================================*/
 
-    if(isset($_GET["ruta"])){
+    /* if(isset($_GET["ruta"])){
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "usuarios" ||
@@ -168,15 +100,15 @@ CUERPO DOCUMENTO
 
       include "informacion.php";
 
-    }
+    } */
 
     /*=============================================
     FOOTER
     =============================================*/
 
-    include "modulos/footer.php";
+    //include "modulos/footer.php";
 
-    echo '</div>';
+    //echo '</div>';
 
   }else{
 
@@ -187,9 +119,24 @@ CUERPO DOCUMENTO
   ?>
 
 
-<script src="vistas/js/plantilla.js"></script>
-<script src="vistas/js/usuarios.js"></script>
-<script src="vistas/js/mascotas.js"></script>
+
+
+ <!-- plugins:js -->
+ <script src="vistas/modulos/template/vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="vistas/modulos/template/vendors/chart.js/Chart.min.js"></script>
+  <script src="vistas/modulos/template/js/jquery.cookie.js" type="text/javascript"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="vistas/modulos/template/js/off-canvas.js"></script>
+  <script src="vistas/modulos/template/js/hoverable-collapse.js"></script>
+  <script src="vistas/modulos/template/js/template.js"></script>
+  <script src="vistas/modulos/template/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="vistas/modulos/template/js/dashboard.js"></script>
+  <!-- End custom js for this page-->
 
 </body>
 </html>

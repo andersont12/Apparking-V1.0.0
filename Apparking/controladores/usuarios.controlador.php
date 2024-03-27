@@ -55,7 +55,7 @@ class ControladorUsuarios{
 
 							echo '<script>
 
-								window.location = "inicio";
+								window.location = "../vistas/modulos/template/index.html";
 
 							</script>';
 
