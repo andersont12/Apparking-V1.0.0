@@ -26,7 +26,7 @@ class ControladorUsuarios{
 					if($respuesta["estado"] == 1){
 
 						$_SESSION["iniciarSesion"] = "ok";
-						//$_SESSION["id"] = $respuesta["id"];
+						$_SESSION["IdCargo_Copia"] = $respuesta["IdCargo_Copia"];
 						$_SESSION["nombre"] = $respuesta["nombre"];
 						$_SESSION["usuario"] = $respuesta["usuario"];
 						$_SESSION["foto"] = $respuesta["foto"];
@@ -46,8 +46,8 @@ class ControladorUsuarios{
 						$item1 = "ultimo_login";
 						$valor1 = $fechaActual;
 
-						$item2 = "id";
-						$valor2 = $respuesta["id"];
+						$item2 = "IdCargo_Copia";
+						$valor2 = $respuesta["IdCargo_Copia"];
 
 						$ultimoLogin = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
 
@@ -55,7 +55,7 @@ class ControladorUsuarios{
 
 							echo '<script>
 
-								window.location = "inicio";
+								window.location = "vistas/modulos/inicio.php";
 
 							</script>';
 
