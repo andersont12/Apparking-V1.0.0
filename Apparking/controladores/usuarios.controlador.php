@@ -54,7 +54,7 @@ class ControladorUsuarios{
 						if($ultimoLogin == "ok"){
 
 							echo '<script>
-								window.location = "vistas/modulos/inicio.php";
+								window.location = "vistas/plantilla.php";
 							</script>';
 
 						}				
