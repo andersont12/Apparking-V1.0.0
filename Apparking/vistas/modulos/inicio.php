@@ -12,7 +12,7 @@
 
           if($_SESSION["perfil"] =="Administrador"){
           
-           include "informacion.php";
+            include "Superadmin/template.html";
 
           }
         
