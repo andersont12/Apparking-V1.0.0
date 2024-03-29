@@ -8,3 +8,5 @@ require_once "modelos/usuarios.modelo.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();
+
+?>

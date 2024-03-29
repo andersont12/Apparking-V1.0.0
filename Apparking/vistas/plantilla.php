@@ -53,70 +53,61 @@ CUERPO DOCUMENTO
  
   <?php
 
-  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
 
-   
+  echo '<div class="wrapper">';
 
-    include "modulos/template/index.html";
-   
-    /*=============================================
-    CABEZOTE
-    =============================================*/
+   /*=============================================
+   CABEZOTE
+   =============================================*/
 
-    //include "modulos/cabezote.php";
+   /*=============================================
+   MENU
+   =============================================*/
 
-    /*=============================================
-    MENU
-    =============================================*/
 
-    //include "modulos/Superadmin/template.html";
+   /*=============================================
+   CONTENIDO
+   =============================================*/
 
-    /*=============================================
-    CONTENIDO
-    =============================================*/
+   if(isset($_GET["ruta"])){
 
-    /* if(isset($_GET["ruta"])){
+     if($_GET["ruta"] == "inicio" ||
+        $_GET["ruta"] == "login" ||
+        $_GET["ruta"] == "salir"){
 
-      if($_GET["ruta"] == "inicio" ||
-         $_GET["ruta"] == "usuarios" ||
-         $_GET["ruta"] == "mascotas" ||
-         $_GET["ruta"] == "respeto" ||
-         $_GET["ruta"] == "responsabilidad" ||
-         $_GET["ruta"] == "procesoDeVacunacion" ||
-         $_GET["ruta"] == "procesoDeDesparacitacion" ||
-         $_GET["ruta"] == "microchip" ||
-         $_GET["ruta"] == "esterilizacion" ||
-         $_GET["ruta"] == "salir"){
-
-        include "modulos/".$_GET["ruta"].".php";
-
-      }else{
-
-        include "modulos/404.php";
-
+       include "modulos/".$_GET["ruta"].".php";
+      }
+      elseif($_GET["ruta"] == "prueba"){
+          include "modulos/carpetaprueba/".$_GET["ruta"].".php";
       }
 
-    }else{
+     else{
 
-      include "informacion.php";
+       include "modulos/404.php";
 
-    } */
+     }
 
-    /*=============================================
-    FOOTER
-    =============================================*/
+   }else{
 
-    //include "modulos/footer.php";
+     include "informacion.php";
 
-    //echo '</div>';
+   }
 
-  }else{
+   /*=============================================
+   FOOTER
+   =============================================*/
 
-    include "modulos/login.php";
 
-  }
+   echo '</div>';
 
-  ?>
+ }else{
+
+   include "modulos/login.php";
+
+ }
+
+ ?>
 
 
 
