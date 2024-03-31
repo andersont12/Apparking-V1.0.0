@@ -18,10 +18,7 @@
 
 </head>
 <body>
-  <?php
-    include "modulos/template/index.html";
-  ?>
-     
+    arreglar esto
 </body>
 
   <!-- plugins:js -->

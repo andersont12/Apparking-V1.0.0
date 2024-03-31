@@ -81,18 +81,12 @@ if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
       elseif($_GET["ruta"] == "prueba"){
           include "modulos/carpetaprueba/".$_GET["ruta"].".php";
       }
-
-     else{
-
-       include "modulos/404.php";
-
-     }
-
-   }else{
-
-     include "informacion.php";
-
    }
+   else{
+
+    include "modulos/404.php";
+
+  }
 
    /*=============================================
    FOOTER
